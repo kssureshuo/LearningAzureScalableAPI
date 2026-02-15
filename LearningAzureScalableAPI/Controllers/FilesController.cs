@@ -72,5 +72,9 @@ namespace LearningAzureScalableAPI.Controllers
         //        throw;
         //    }
         //}
+        public async Task<string> getName()
+        {
+            return await Task.FromResult("Heyy I am suresh mathpal");
+        }
     }
 }
