@@ -11,14 +11,14 @@ namespace LearningAzureScalableAPI.Services
     {
         private readonly BlobContainerClient _containerClient;
         private readonly ILogger<BlobStorageService> _logger;
-        private readonly string _connectionString;
+        //private readonly string _connectionString;
         public BlobStorageService(IConfiguration configuration, ILogger<BlobStorageService> logger)
         {
             _logger = logger;
             var containerName = configuration["BlobContainerName"];
-            _connectionString = configuration["learning-azure-connectionstring"];
+            //_connectionString = configuration["learning-azure-connectionstring"];
             _logger.LogInformation("ContainerName: {containerName}", containerName);
-            _logger.LogInformation("ConnectionString: {connectionString}", _connectionString);
+            //_logger.LogInformation("ConnectionString: {connectionString}", _connectionString);
             BlobServiceClient blobServiceClient =
                 new BlobServiceClient(new Uri($"https://storagelearningazureblob.blob.core.windows.net"),
                 new DefaultAzureCredential()
@@ -106,10 +106,10 @@ namespace LearningAzureScalableAPI.Services
             }
         }
 
-        public Task<string> GetSecretAsync(string secret)
-        {
-            return Task.FromResult(_connectionString);
+        //public Task<string> GetSecretAsync(string secret)
+        //{
+        //    return Task.FromResult(_connectionString);
 
-        }
+        //}
     }
 }

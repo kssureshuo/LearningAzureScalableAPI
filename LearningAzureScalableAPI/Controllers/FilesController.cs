@@ -57,20 +57,20 @@ namespace LearningAzureScalableAPI.Controllers
             return Ok("File deleted");
         }
 
-        [HttpGet("get-secret")]
-        public async Task<IActionResult> GetSecret()
-        {
-            try
-            {
-                var value = await _blobStorageService.GetSecretAsync("MyAppSecret");
-                _logger.LogInformation("app secret is: ", value);
-                return Ok(value);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Eror in GEtSEcert: ", ex);
-                throw;
-            }
-        }
+        //[HttpGet("get-secret")]
+        //public async Task<IActionResult> GetSecret()
+        //{
+        //    try
+        //    {
+        //        var value = await _blobStorageService.GetSecretAsync("MyAppSecret");
+        //        _logger.LogInformation("app secret is: ", value);
+        //        return Ok(value);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError("Eror in GEtSEcert: ", ex);
+        //        throw;
+        //    }
+        //}
     }
 }

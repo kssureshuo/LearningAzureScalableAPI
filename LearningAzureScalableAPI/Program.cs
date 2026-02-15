@@ -7,13 +7,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var keyVaultUrl = new Uri("https://learning-key-vault12.vault.azure.net/");
-
-builder.Configuration.AddAzureKeyVault(
-    keyVaultUrl,
-    new DefaultAzureCredential());
-
-
 // Add services to the container.
 
 builder.Services.AddControllers();
