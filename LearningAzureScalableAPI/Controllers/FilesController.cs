@@ -9,9 +9,11 @@ namespace LearningAzureScalableAPI.Controllers
     public class FilesController : ControllerBase
     {
         private readonly BlobStorageService _blobStorageService;
-        public FilesController(BlobStorageService blobStorageService)
+        private readonly ILogger<FilesController> _logger;
+        public FilesController(BlobStorageService blobStorageService, ILogger<FilesController> logger)
         {
             _blobStorageService = blobStorageService;
+            _logger = logger;
         }
 
         [HttpPost("UploadFile")]
@@ -58,8 +60,17 @@ namespace LearningAzureScalableAPI.Controllers
         [HttpGet("get-secret")]
         public async Task<IActionResult> GetSecret()
         {
-            var value = await _blobStorageService.GetSecretAsync("MyAppSecret");
-            return Ok(value);
+            try
+            {
+                var value = await _blobStorageService.GetSecretAsync("MyAppSecret");
+                _logger.LogInformation("app secret is: ", value);
+                return Ok(value);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Eror in GEtSEcert: ", ex);
+                throw;
+            }
         }
     }
 }
