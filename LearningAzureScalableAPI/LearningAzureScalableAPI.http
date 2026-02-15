@@ -1,0 +1,6 @@
+@LearningAzureScalableAPI_HostAddress = http://localhost:5263
+
+GET {{LearningAzureScalableAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
