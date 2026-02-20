@@ -10,7 +10,7 @@ namespace LearningAzureScalableAPI.Tests
 
             int result = a + b;
 
-            Assert.Equal(5, result);
+            Assert.Equal(15, result);
         }
     }
 }

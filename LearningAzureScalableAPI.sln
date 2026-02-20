@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningAzureScalableAPI", "LearningAzureScalableAPI\LearningAzureScalableAPI.csproj", "{FF4FC011-CAFD-4500-888C-599D2834A4E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningAzureScalableAPI", "LearningAzureScalableAPI\LearningAzureScalableAPI.csproj", "{FF4FC011-CAFD-4500-888C-599D2834A4E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningAzureScalableAPI.Tests", "LearningAzureScalableAPI.Tests\LearningAzureScalableAPI.Tests.csproj", "{88AB1110-975C-4F47-B080-5FE8B696CFFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FF4FC011-CAFD-4500-888C-599D2834A4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF4FC011-CAFD-4500-888C-599D2834A4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF4FC011-CAFD-4500-888C-599D2834A4E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88AB1110-975C-4F47-B080-5FE8B696CFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88AB1110-975C-4F47-B080-5FE8B696CFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88AB1110-975C-4F47-B080-5FE8B696CFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88AB1110-975C-4F47-B080-5FE8B696CFFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
